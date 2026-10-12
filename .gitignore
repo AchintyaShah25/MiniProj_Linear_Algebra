@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# DS5020 project
+data/
+.venv/
+.idea/
+.ipynb_checkpoints/
+PCA_Example.ipynb
