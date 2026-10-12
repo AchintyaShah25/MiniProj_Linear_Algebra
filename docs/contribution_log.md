@@ -13,12 +13,12 @@ Updated daily. Both partners sign at the end.
 | 2026-10-12 | J1 success targets | Both | `README.md` | Draft, needs Achintya's OK |
 | 2026-10-12 | README, requirements, logs set up | Tanay | `README.md`, `requirements.txt`, `docs/` | Done |
 | 2026-10-12 | ML1 method decision | Tanay | `ML_Engineer.ipynb` section 2, `docs/decision_log.md` M1 to M7 | Done |
-| | ML2 fit for each k, reconstruction error curve | Tanay | | To do |
-| | ML3 recommendation function | Tanay | | To do |
-| | ML4 hit rate vs baseline, timing | Tanay | | To do |
-| | ML5 PCA vs SVD table | Tanay | | To do |
-| | ML6 customer map | Tanay | | To do |
-| | ML7 purchase value sensitivity | Tanay | | To do |
+| 2026-10-12 | ML2 SVD for each k, reconstruction error, validation split | Tanay | `ML_Engineer.ipynb` sections 6 to 9, `figures/choosing_k.png` | Done |
+| 2026-10-12 | ML3 product page box and customer recommendations | Tanay | `ML_Engineer.ipynb` sections 8 and 10 | Done |
+| 2026-10-12 | ML4 test hit rate vs baseline, nightly job timing | Tanay | `ML_Engineer.ipynb` section 11, `figures/hit_rate.png` | Done |
+| 2026-10-12 | ML5 PCA vs SVD table | Tanay | `ML_Engineer.ipynb` section 12 | Done |
+| 2026-10-12 | ML6 customer map and segment names | Tanay | `ML_Engineer.ipynb` section 13, `figures/customer_map.png`, `results/segments.csv` | Done |
+| 2026-10-12 | ML7 purchase value sensitivity | Tanay | `ML_Engineer.ipynb` section 14 | Done |
 | | J2 memo | Both | | To do |
 | | J3 slides | Both | | To do |
 

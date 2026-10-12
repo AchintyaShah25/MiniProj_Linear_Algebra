@@ -1,0 +1,200 @@
+{
+  "matrix": {
+    "customers": 5456,
+    "products": 3680,
+    "non_zeros": 411136,
+    "dense_mb": 160.6,
+    "sparse_mb": 4.96
+  },
+  "chosen": {
+    "k": 100,
+    "method": "dot V",
+    "rule": "best method on validation, smallest k within 1 point of its best"
+  },
+  "ml2": [
+    {
+      "k": 10,
+      "fit seconds": 0.08,
+      "rel. reconstruction error": 0.898,
+      "variance explained": 0.154
+    },
+    {
+      "k": 20,
+      "fit seconds": 0.08,
+      "rel. reconstruction error": 0.876,
+      "variance explained": 0.195
+    },
+    {
+      "k": 50,
+      "fit seconds": 0.14,
+      "rel. reconstruction error": 0.832,
+      "variance explained": 0.273
+    },
+    {
+      "k": 100,
+      "fit seconds": 0.24,
+      "rel. reconstruction error": 0.781,
+      "variance explained": 0.36
+    },
+    {
+      "k": 200,
+      "fit seconds": 0.51,
+      "rel. reconstruction error": 0.702,
+      "variance explained": 0.482
+    }
+  ],
+  "validation": {
+    "cutoff": "2011-08-09 12:50:00",
+    "customers": 1420,
+    "baseline": 0.24929577464788732,
+    "hit_rate": {
+      "10": {
+        "cosine V": 0.1267605633802817,
+        "cosine VS": 0.09295774647887324,
+        "dot V": 0.33661971830985915
+      },
+      "20": {
+        "cosine V": 0.1704225352112676,
+        "cosine VS": 0.1316901408450704,
+        "dot V": 0.3654929577464789
+      },
+      "50": {
+        "cosine V": 0.21549295774647886,
+        "cosine VS": 0.18309859154929578,
+        "dot V": 0.40211267605633805
+      },
+      "100": {
+        "cosine V": 0.24014084507042255,
+        "cosine VS": 0.23098591549295774,
+        "dot V": 0.41901408450704225
+      },
+      "200": {
+        "cosine V": 0.2295774647887324,
+        "cosine VS": 0.3323943661971831,
+        "dot V": 0.39225352112676054
+      }
+    }
+  },
+  "test": {
+    "customers": 1919,
+    "svd_hit_rate": 0.40906722251172484,
+    "baseline_hit_rate": 0.2652423137050547,
+    "post_check_by_k": {
+      "10": 0.3491401771756123,
+      "20": 0.3778009379885357,
+      "50": 0.40906722251172484,
+      "100": 0.40906722251172484,
+      "200": 0.39812402292860866
+    }
+  },
+  "nightly_job_seconds": {
+    "fit": 0.3,
+    "product pages": 0.86,
+    "all customers": 0.3,
+    "total": 1.46
+  },
+  "factors_mb": 7.31,
+  "svd": {
+    "fit_seconds": 0.29,
+    "peak_mb": 17.8,
+    "rel_error": 0.781,
+    "variance_explained": 0.36,
+    "hit_rate": 0.40906722251172484,
+    "component_1": {
+      "corr_basket": 0.9761181869881527,
+      "corr_popularity": 0.9853404961311156,
+      "top": "WHITE HANGING HEART T-LIGHT HOLDER; PACK OF 72 RETROSPOT CAKE CASES; REGENCY CAKESTAND 3 TIER"
+    }
+  },
+  "pca": {
+    "fit_seconds": 0.37,
+    "peak_mb": 16.6,
+    "rel_error": 0.78,
+    "variance_explained": 0.362,
+    "hit_rate": 0.40229286086503385,
+    "component_1": {
+      "corr_basket": 0.9787691604881654,
+      "corr_popularity": 0.9543682066405969,
+      "top": "PACK OF 72 RETROSPOT CAKE CASES; LUNCH BAG RED RETROSPOT; WHITE HANGING HEART T-LIGHT HOLDER"
+    }
+  },
+  "segments": [
+    {
+      "group": 0,
+      "name": "Heart and wicker home decor",
+      "customers": 1321,
+      "median products bought": 36,
+      "UK": "98%",
+      "top non-UK countries": "Netherlands, Spain, Germany",
+      "signature products": "Heart Ivory Trellis Large (17% vs 8%); Zinc Metal Heart Decoration (24% vs 11%); Heart Of Wicker Large (29% vs 14%); Single Heart Zinc T-Light Holder (17% vs 8%); Heart Of Wicker Small (30% vs 14%)"
+    },
+    {
+      "group": 1,
+      "name": "Traditional toys and crafts",
+      "customers": 945,
+      "median products bought": 47,
+      "UK": "89%",
+      "top non-UK countries": "France, Germany, Netherlands",
+      "signature products": "Mini Paint Set Vintage (19% vs 6%); Traditional Modelling Clay (20% vs 7%); Picture Dominoes (19% vs 6%); Blue Harmonica In Box (18% vs 6%); Pack Of 12 Traditional Crayons (19% vs 7%)"
+    },
+    {
+      "group": 2,
+      "name": "Funny metal signs",
+      "customers": 935,
+      "median products bought": 32,
+      "UK": "96%",
+      "top non-UK countries": "Germany, Spain, Switzerland",
+      "signature products": "No Singing Metal Sign (17% vs 7%); Hand Over The Chocolate   Sign (21% vs 8%); Metal Sign Take It Or Leave It (18% vs 8%); Gin + Tonic Diet Metal Sign (21% vs 9%); Cook With Wine Metal Sign (18% vs 8%)"
+    },
+    {
+      "group": 3,
+      "name": "Regency tea and baking",
+      "customers": 830,
+      "median products bought": 42,
+      "UK": "90%",
+      "top non-UK countries": "France, Germany, Switzerland",
+      "signature products": "Regency Teapot Roses (15% vs 4%); Pink Regency Teacup And Saucer (23% vs 7%); Green Regency Teacup And Saucer (27% vs 8%); Set Of 3 Regency Cake Tins (22% vs 7%); Roses Regency Teacup And Saucer (29% vs 9%)"
+    },
+    {
+      "group": 4,
+      "name": "Kids' party tableware",
+      "customers": 718,
+      "median products bought": 46,
+      "UK": "80%",
+      "top non-UK countries": "Germany, France, Spain",
+      "signature products": "Pack Of 20 Skull Paper Napkins (17% vs 5%); Set/6 Red Spotty Paper Plates (19% vs 6%); Pack Of 72 Skull Cake Cases (30% vs 9%); Pack Of 60 Dinosaur Cake Cases (30% vs 10%); Set/6 Red Spotty Paper Cups (18% vs 6%)"
+    },
+    {
+      "group": 5,
+      "name": "Jumbo bags and storage",
+      "customers": 707,
+      "median products bought": 55,
+      "UK": "89%",
+      "top non-UK countries": "Germany, France, Portugal",
+      "signature products": "Jumbo Bag Apples (26% vs 6%); Jumbo Bag Pears (18% vs 4%); Jumbo Bag Spaceboy Design (31% vs 7%); Jumbo Bag Dolly Girl Design (20% vs 4%); Jumbo Bag Owls (28% vs 6%)"
+    }
+  ],
+  "silhouette": {
+    "3": 0.135,
+    "4": 0.141,
+    "5": 0.15,
+    "6": 0.155
+  },
+  "ml7": [
+    {
+      "purchase value": "1/0",
+      "validation hit rate": 0.41901408450704225,
+      "test hit rate": 0.40906722251172484
+    },
+    {
+      "purchase value": "count",
+      "validation hit rate": 0.23309859154929577,
+      "test hit rate": 0.2235539343408025
+    },
+    {
+      "purchase value": "log(1 + count)",
+      "validation hit rate": 0.39436619718309857,
+      "test hit rate": 0.3824908806670141
+    }
+  ]
+}

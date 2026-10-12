@@ -32,8 +32,8 @@ pip install -r requirements.txt
 ```
 
 1. Put the raw file in `data/raw/` (see Data above).
-2. Run `Data_Engineer.ipynb` top to bottom. It writes the matrix and index files to `data/processed/`. (To be replaced by `python build_matrix.py`, DE6.)
-3. Run `ML_Engineer.ipynb` top to bottom.
+2. Run `Data_Engineer.ipynb` top to bottom. It writes the matrix and index files to `data/processed/` and caches the raw file in `data/cache/`. (To be replaced by `python build_matrix.py`, DE6.)
+3. Run `ML_Engineer.ipynb` top to bottom. Section 5 re-runs the code in `Data_Engineer.ipynb` to get the dated training lines, so that notebook and the raw file (or its cache) need to be there. It writes figures to `figures/` and the numbers quoted in the memo to `results/results.json`.
 
 All random steps use seed 42.
 
@@ -42,7 +42,9 @@ All random steps use seed 42.
 | Path | What it is | Owner |
 |---|---|---|
 | `Data_Engineer.ipynb` | Profile, cleaning, time split, sparse matrix, matrix report (DE1 to DE5) | Achintya |
-| `ML_Engineer.ipynb` | Method choice, fitting, recommendations, evaluation, customer map (ML1 to ML7) | Tanay |
+| `ML_Engineer.ipynb` | Method choice, validation, recommendations, evaluation, PCA comparison, customer map, purchase value check (ML1 to ML7) | Tanay |
+| `figures/` | Figures from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
+| `results/` | `results.json` and `segments.csv` from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
 | `docs/decision_log.md` | Every decision and its reason (R1) | Both |
 | `docs/contribution_log.md` | Who did what, with evidence (C2) | Both |
 | `requirements.txt` | Package versions (R6) | Both |
@@ -58,4 +60,4 @@ All random steps use seed 42.
 
 ## Privacy (R4)
 
-Customer IDs only exist in `data/processed/customers_internal.csv`, which is never committed. Everything else uses row numbers or segment names.
+Customer IDs only exist in `data/processed/customers_internal.csv` and in memory while the notebooks run. Neither is committed. Everything else uses row numbers or segment names.
