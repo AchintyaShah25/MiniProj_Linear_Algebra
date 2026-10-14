@@ -56,7 +56,7 @@ All random steps use seed 42.
 | `build_matrix.py` | The same pipeline as one script: rebuilds `data/processed/` from the raw file (DE6) | Achintya |
 | `ML_Engineer.ipynb` | Method choice, validation, recommendations, evaluation, PCA comparison, customer map, purchase value check (ML1 to ML7) | Tanay |
 | `figures/` | Figures from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
-| `results/` | `results.json` and `segments.csv` from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
+| `results/` | `results.json` and `segments.csv` from `ML_Engineer.ipynb`; `cleaning_log.csv` and `matrix_report.json` from `build_matrix.py` (DE2, DE5). No customer IDs | Tanay, Achintya |
 | `docs/decision_log.md` | Every decision and its reason (R1) | Both |
 | `docs/memo.pdf`, `docs/slides.pptx` | One-page memo to Sarah (J2) and the 5-minute presentation (J3) | Both |
 | `docs/contribution_log.md` | Who did what, with evidence (C2) | Both |

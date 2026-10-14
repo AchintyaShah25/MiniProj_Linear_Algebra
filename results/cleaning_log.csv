@@ -1,0 +1,9 @@
+Cleaning Step,Rows Retained,Rows Dropped,% of Original Dropped
+Drop missing Customer ID,824364,243007,22.77%
+Drop exact duplicates,797885,26479,2.48%
+Drop non-product StockCodes,794223,3662,0.34%
+Drop 0 or negative price,794163,60,0.01%
+Train drop cancellations,660194,15526,1.45%
+Train drop fully returned purchases,657296,2898,0.27%
+Test drop cancellations,116383,2060,0.19%
+Test drop fully returned purchases,115920,463,0.04%

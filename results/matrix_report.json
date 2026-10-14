@@ -1,0 +1,13 @@
+{
+  "customers": 5456,
+  "products": 3680,
+  "non_zeros": 411136,
+  "sparsity_%": 97.952,
+  "dense_MB": 160.6,
+  "sparse_MB": 4.96,
+  "cutoff": "2011-10-09 12:50:00",
+  "min_customers_per_product": 10,
+  "test_customers": 1919,
+  "heldout_pairs": 49214,
+  "heldout_not_in_matrix_%": 9.47
+}
