@@ -18,7 +18,7 @@ Taken from Sarah's email and Section 1.4 of the brief. Draft by Tanay, needs Ach
 | # | Result |
 |---|---|
 | 1 | 7.31 MB of factors at k = 100, 22x smaller than the dense matrix. Met |
-| 2 | About 1.5 s for the whole nightly job. Met |
+| 2 | About 1 s for the whole nightly job. Met |
 | 3 | Hit rate at 10 of 40.9% vs 26.5% for best sellers, on 1,919 test customers. Met |
 | 4 | 6 groups: heart and wicker home decor, traditional toys and crafts, funny metal signs, Regency tea and baking, kids' party tableware, jumbo bags and storage. Met |
 
