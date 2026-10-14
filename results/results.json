@@ -14,31 +14,31 @@
   "ml2": [
     {
       "k": 10,
-      "fit seconds": 0.08,
+      "fit seconds": 0.06,
       "rel. reconstruction error": 0.898,
       "variance explained": 0.154
     },
     {
       "k": 20,
-      "fit seconds": 0.08,
+      "fit seconds": 0.06,
       "rel. reconstruction error": 0.876,
       "variance explained": 0.195
     },
     {
       "k": 50,
-      "fit seconds": 0.14,
+      "fit seconds": 0.12,
       "rel. reconstruction error": 0.832,
       "variance explained": 0.273
     },
     {
       "k": 100,
-      "fit seconds": 0.24,
+      "fit seconds": 0.2,
       "rel. reconstruction error": 0.781,
       "variance explained": 0.36
     },
     {
       "k": 200,
-      "fit seconds": 0.51,
+      "fit seconds": 0.41,
       "rel. reconstruction error": 0.702,
       "variance explained": 0.482
     }
@@ -88,14 +88,14 @@
     }
   },
   "nightly_job_seconds": {
-    "fit": 0.3,
-    "product pages": 0.86,
-    "all customers": 0.3,
-    "total": 1.46
+    "fit": 0.21,
+    "product pages": 0.62,
+    "all customers": 0.21,
+    "total": 1.04
   },
   "factors_mb": 7.31,
   "svd": {
-    "fit_seconds": 0.29,
+    "fit_seconds": 0.21,
     "peak_mb": 17.8,
     "rel_error": 0.781,
     "variance_explained": 0.36,
@@ -107,7 +107,7 @@
     }
   },
   "pca": {
-    "fit_seconds": 0.37,
+    "fit_seconds": 0.3,
     "peak_mb": 16.6,
     "rel_error": 0.78,
     "variance_explained": 0.362,

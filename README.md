@@ -13,6 +13,17 @@ Taken from Sarah's email and Section 1.4 of the brief. Draft by Tanay, needs Ach
 | 3 | Better than best sellers | Hit rate at 10 on held-out test purchases is higher than the top-10 best-seller baseline | Hit rate at 10 over all 1,919 test customers |
 | 4 | Customer groups marketing can name | 3 to 6 segments, each described by its top products and countries, no customer IDs | ML6 figure and segment table |
 
+### Results against the targets
+
+| # | Result |
+|---|---|
+| 1 | 7.31 MB of factors at k = 100, 22x smaller than the dense matrix. Met |
+| 2 | About 1.5 s for the whole nightly job. Met |
+| 3 | Hit rate at 10 of 40.9% vs 26.5% for best sellers, on 1,919 test customers. Met |
+| 4 | 6 groups: heart and wicker home decor, traditional toys and crafts, funny metal signs, Regency tea and baking, kids' party tableware, jumbo bags and storage. Met |
+
+Details are in `ML_Engineer.ipynb` (section 16 summarises), the memo is `docs/memo.pdf` and the slides are `docs/slides.pptx`.
+
 ## Data
 
 UCI Online Retail II: https://archive.ics.uci.edu/dataset/502/online+retail+ii (CC BY 4.0).
@@ -32,7 +43,7 @@ pip install -r requirements.txt
 ```
 
 1. Put the raw file in `data/raw/` (see Data above).
-2. Run `Data_Engineer.ipynb` top to bottom. It writes the matrix and index files to `data/processed/` and caches the raw file in `data/cache/`. (To be replaced by `python build_matrix.py`, DE6.)
+2. Run `python build_matrix.py` (or `Data_Engineer.ipynb` top to bottom). Either one writes the matrix and index files to `data/processed/` and caches the raw file in `data/cache/`.
 3. Run `ML_Engineer.ipynb` top to bottom. Section 5 re-runs the code in `Data_Engineer.ipynb` to get the dated training lines, so that notebook and the raw file (or its cache) need to be there. It writes figures to `figures/` and the numbers quoted in the memo to `results/results.json`.
 
 All random steps use seed 42.
@@ -42,10 +53,12 @@ All random steps use seed 42.
 | Path | What it is | Owner |
 |---|---|---|
 | `Data_Engineer.ipynb` | Profile, cleaning, time split, sparse matrix, matrix report (DE1 to DE5) | Achintya |
+| `build_matrix.py` | The same pipeline as one script: rebuilds `data/processed/` from the raw file (DE6) | Achintya |
 | `ML_Engineer.ipynb` | Method choice, validation, recommendations, evaluation, PCA comparison, customer map, purchase value check (ML1 to ML7) | Tanay |
 | `figures/` | Figures from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
 | `results/` | `results.json` and `segments.csv` from `ML_Engineer.ipynb` (no customer IDs) | Tanay |
 | `docs/decision_log.md` | Every decision and its reason (R1) | Both |
+| `docs/memo.pdf`, `docs/slides.pptx` | One-page memo to Sarah (J2) and the 5-minute presentation (J3) | Both |
 | `docs/contribution_log.md` | Who did what, with evidence (C2) | Both |
 | `requirements.txt` | Package versions (R6) | Both |
 | `data/` | Raw and processed data, not committed | |
