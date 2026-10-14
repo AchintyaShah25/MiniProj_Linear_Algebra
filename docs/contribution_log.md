@@ -21,5 +21,6 @@ Updated daily. Both partners sign at the end.
 | 2026-10-12 | ML7 purchase value sensitivity | Tanay | `ML_Engineer.ipynb` section 14 | Done |
 | 2026-10-12 | J2 memo | Both | `docs/memo.pdf` | Draft by Tanay, needs Achintya's review |
 | 2026-10-12 | J3 slides | Both | `docs/slides.pptx` (slides 1 to 4 Achintya, 5 to 8 Tanay, 9 both) | Draft by Tanay, needs Achintya's review |
+| 2026-10-14 | DE6 follow-ups: StockCode clean-up and asserts in `build_matrix.py`, ID note in `Data_Engineer.ipynb`, reasons D1 to D9 | Tanay (for Achintya, from his notebook notes) | `build_matrix.py`, `Data_Engineer.ipynb`, `docs/decision_log.md` | Done |
 
-Signed: Achintya Shah ________  Tanay Mihani ________
+Signed: Achintya Shah ________  Tanay Mihani, 14 Oct 2026

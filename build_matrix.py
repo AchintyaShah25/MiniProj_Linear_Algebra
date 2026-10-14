@@ -16,6 +16,7 @@ else:
     df = pd.concat(sheets.values(), ignore_index=True)
     df.to_pickle(CACHE)  
 df.columns = df.columns.str.strip()
+df["StockCode"] = df["StockCode"].astype(str).str.strip().str.upper()
 features = df.columns.tolist()
 initial_rows = len(df)
 cleaning_log = []
@@ -105,3 +106,11 @@ report = {
 with open(f"{OUT}/matrix_report.json", "w") as f:
     json.dump(report, f, indent=2)
 print(pd.Series(report))
+
+assert (train_df['Quantity'] > 0).all() and (test_df['Quantity'] > 0).all(), "negative quantities left"
+assert not train_df['Invoice'].str.startswith('C').any(), "cancellations left in train"
+assert train_df['InvoiceDate'].max() < cutoff_date <= test_df['InvoiceDate'].min(), "split overlaps"
+assert (A.data == 1).all(), "matrix is not binary"
+assert heldout.merge(train_pairs, on=['Customer ID', 'StockCode']).empty, "held-out pair found in training"
+assert heldout['cust_row'].notna().all(), "held-out customer missing from matrix"
+print("All checks passed")

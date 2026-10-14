@@ -4,19 +4,19 @@ Every decision with its reason. Add new ones at the bottom of the right section.
 
 ## Data decisions (owner: Achintya)
 
-Choices are filled in from `Data_Engineer.ipynb`. Reasons still to be written.
+Choices and reasons come from `Data_Engineer.ipynb`.
 
 | ID | Decision | Choice | Reason |
 |---|---|---|---|
-| D1 | Lines without a customer ID | Dropped (243,007 rows, 22.8%) | |
-| D2 | Exact duplicate lines | Dropped (26,479 rows) | |
-| D3 | Non-product codes | Kept only 5-digit codes with optional letters on the end; dropped 3,662 rows | |
-| D4 | Zero or negative prices | Dropped (60 rows) | |
-| D5 | Cancellations and returns | Dropped cancellation lines; dropped customer-product pairs fully returned within the same period | |
-| D6 | Test period | Last 2 months, from 2011-10-09 12:50 | |
-| D7 | Held-out purchases | Test purchases of products the customer never bought in training | |
-| D8 | Purchase value | 1/0 "ever bought" | |
-| D9 | Product filter | Bought by at least 10 distinct customers in training (3,680 of 4,519 kept) | |
+| D1 | Lines without a customer ID | Dropped (243,007 rows, 22.8%) | Can't place a line in the matrix without knowing whose purchase it is |
+| D2 | Exact duplicate lines | Dropped (26,479 rows) | The same line entered twice would count one purchase twice |
+| D3 | Non-product codes | Kept only 5-digit codes with optional letters on the end; dropped 3,662 rows | Postage, fees and manual adjustments aren't items a customer chooses, so they'd add noise to "also bought" |
+| D4 | Zero or negative prices | Dropped (60 rows) | Free items and price adjustments aren't real purchases |
+| D5 | Cancellations and returns | Dropped cancellation lines; dropped customer-product pairs fully returned within the same period | A fully returned item wasn't really bought; doing it per period means returns in the test months never change training |
+| D6 | Test period | Last 2 months, from 2011-10-09 12:50 | Holding out the most recent purchases by time tests the model on purchases it never saw (R2) |
+| D7 | Held-out purchases | Test purchases of products the customer never bought in training | The box is for suggesting something new; repeat buys of known products would make the test too easy |
+| D8 | Purchase value | 1/0 "ever bought" | Bulk wholesale quantities would dominate the matrix; ML7 backs this up (counts 22.4% vs 40.9% hit rate for 1/0) |
+| D9 | Product filter | Bought by at least 10 distinct customers in training (3,680 of 4,519 kept) | Products with very few buyers carry little pattern; the filter uses training data only, so nothing leaks from the test |
 
 ## ML decisions (owner: Tanay)
 
