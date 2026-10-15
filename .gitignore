@@ -225,3 +225,5 @@ data/
 .idea/
 .ipynb_checkpoints/
 PCA_Example.ipynb
+
+.DS_Store
