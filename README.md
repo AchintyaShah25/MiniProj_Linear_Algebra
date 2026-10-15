@@ -4,7 +4,7 @@ DS5020 mini-project. Achintya Shah (Data Engineer) and Tanay Mihani (ML Engineer
 
 ## Success targets (J1)
 
-Taken from Sarah's email and Section 1.4 of the brief. Draft by Tanay, needs Achintya's OK.
+Taken from Sarah's email and Section 1.4 of the brief.
 
 | # | What Sarah asked for | Target | How we measure it |
 |---|---|---|---|
@@ -22,7 +22,7 @@ Taken from Sarah's email and Section 1.4 of the brief. Draft by Tanay, needs Ach
 | 3 | Hit rate at 10 of 40.9% vs 26.5% for best sellers, on 1,919 test customers. Met |
 | 4 | 6 groups: heart and wicker home decor, traditional toys and crafts, funny metal signs, Regency tea and baking, kids' party tableware, jumbo bags and storage. Met |
 
-Details are in `ML_Engineer.ipynb` (section 16 summarises), the memo is `docs/memo.pdf` and the slides are `docs/slides.pptx`.
+Details are in `ML_Engineer.ipynb` (section 16 summarises), the memo is `docs/memo.pdf` and the slides are `docs/slides.pptx`. `DS5020_MiniProject_Shah_Mihani.pdf` combines a cover page (team, repository link, contents), the memo and the slides in one file.
 
 ## Data
 
@@ -52,6 +52,7 @@ All random steps use seed 42.
 
 | Path | What it is | Owner |
 |---|---|---|
+| `DS5020_MiniProject_Shah_Mihani.pdf` | Submission file: cover page, memo and slides | Both |
 | `Data_Engineer.ipynb` | Profile, cleaning, time split, sparse matrix, matrix report (DE1 to DE5) | Achintya |
 | `build_matrix.py` | The same pipeline as one script: rebuilds `data/processed/` from the raw file (DE6) | Achintya |
 | `ML_Engineer.ipynb` | Method choice, validation, recommendations, evaluation, PCA comparison, customer map, purchase value check (ML1 to ML7) | Tanay |
